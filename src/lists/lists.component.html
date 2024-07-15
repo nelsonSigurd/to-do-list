@@ -1,1 +1,19 @@
-<p>lists works!</p>
+<div class="d-flex">
+    <div *ngFor="let list of lists" class="card shadow-sm m-2">
+        <div class="card-body">
+            <div class="card-title">
+                <h5>{{list.title}}</h5>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="input-group m-2">
+                <input class="form-control form-control-sm" placeholder="Add Another List" type="text" [(ngModel)]='title'>
+                <div class="input-group-append">
+                    <button class="btn btn-sm btn-success" (click)="addList(title)">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
