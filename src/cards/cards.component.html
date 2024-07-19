@@ -1,1 +1,19 @@
-<p>cards works!</p>
+<div>
+    <ul class="list-group mb-3">
+        <li *ngFor="let card of cards; let i = index;" class="list-group-item">
+            {{card.content}}
+            <button class="btn btn-danger btn-sm" (click)="deleteCard(i)">
+                X
+            </button>
+        </li>
+    </ul>
+    <div class="input-group">
+        <input class="form-control form-control-sm" placeholder="Add a Card" type="text" [(ngModel)]="newCardContent"/>
+        <div class="input-group-append">
+            <button class="btn btn-primary btn-sm" (click)="addCard()">
+            Add Card
+            </button>
+        </div>
+    </div>
+        
+</div>

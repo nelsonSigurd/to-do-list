@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { CardsComponent } from '../cards/cards.component';
 
 interface list {
   id: number;
@@ -11,7 +12,7 @@ interface list {
 @Component({
   selector: 'app-lists',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, CardsComponent],
   templateUrl: './lists.component.html',
   styleUrl: './lists.component.css'
 })
