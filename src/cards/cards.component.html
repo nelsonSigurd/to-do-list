@@ -1,19 +1,13 @@
-<div>
+<div cdkDropList (cdkDropListDropped)="drop($event)">
     <ul class="list-group mb-3">
-        <li *ngFor="let card of cards; let i = index;" class="list-group-item">
+        <li *ngFor="let card of cards; let i = index;" class="list-group-item d-flex justify-content-between align-items-center shadow my-1" cdkDrag>
             {{card.content}}
-            <button class="btn btn-danger btn-sm" (click)="deleteCard(i)">
-                X
-            </button>
+            <i class="fas fa-ellipsis-h edit-card" (click)="deleteCard(i)" role="button"></i>
         </li>
     </ul>
-    <div class="input-group">
-        <input class="form-control form-control-sm" placeholder="Add a Card" type="text" [(ngModel)]="newCardContent"/>
-        <div class="input-group-append">
-            <button class="btn btn-primary btn-sm" (click)="addCard()">
-            Add Card
-            </button>
-        </div>
-    </div>
+    <button class="btn btn-sm btn-add-card" *ngIf="!addingCard" (click)="addingCard = !addingCard">
+        <i class="fas fa-plus"></i> Add Card to List
+    </button>
+    <input type="text" placeholder="Enter Title For This Card" *ngIf="addingCard" class="form-control form-control-sm" [(ngModel)]="newCardContent" (keydown.enter)="addCard()">
         
 </div>

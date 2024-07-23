@@ -1,0 +1,36 @@
+.cdk-drag-preview {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+  
+  .cdk-drag-placeholder {
+    opacity: 0;
+  }
+
+  .btn-add-card {
+    background-color: #F1F2F4;
+    width: 100%;
+    text-align: left;
+    border-radius: 10px 10px;
+  }
+
+  .btn-add-card:hover {
+    background-color: #cacaca;
+    border-radius: 10px 10px;
+  }
+
+  .edit-card:hover {
+    background-color: #cacaca;
+  }
+
+  .list-group-item {
+    border-radius: 10px 10px;
+    padding: 0.5em;
+  }
+
+  .list-group-item:hover {
+    border: 1px solid blue;
+  }
+
+
+
